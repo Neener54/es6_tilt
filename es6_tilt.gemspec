@@ -17,9 +17,9 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
 
-  s.add_dependency "rails"
-  s.add_dependency "babel-transpiler"
-  s.add_dependency "tilt"
-  s.add_dependency "execjs"
-  s.add_dependency "sprockets"
+  s.add_dependency "rails", '~> 4.0'
+  s.add_runtime_dependency "babel-transpiler", "~> 0.6.0"
+  s.add_runtime_dependency "tilt", '~> 2.0'
+  s.add_runtime_dependency "execjs",  '~> 2.0'
+  s.add_runtime_dependency "sprockets", '~> 1.0'
 end
