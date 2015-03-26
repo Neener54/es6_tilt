@@ -21,4 +21,5 @@ Gem::Specification.new do |s|
   s.add_dependency "babel-source"
   s.add_dependency "tilt"
   s.add_dependency "execjs"
+  s.add_dependency "sprockets"
 end
