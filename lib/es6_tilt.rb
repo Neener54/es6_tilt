@@ -26,9 +26,8 @@ module Es6Tilt
       return result['code']
     end
 
-    def evaluate(scopre, locals, &block)
+    def evaluate(scope, locals, &block)
       @output ||= transform(data)
     end
-
   end
 end
