@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", '~> 4.0'
   s.add_runtime_dependency "babel-transpiler", "~> 0.6.0"
-  s.add_runtime_dependency "tilt", '~> 2.0'
+  s.add_runtime_dependency "tilt", '~> 1.0'
   s.add_runtime_dependency "execjs",  '~> 2.0'
   s.add_runtime_dependency "sprockets", '~> 1.0'
 end
