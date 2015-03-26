@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails"
-  s.add_dependency "babel-source"
+  s.add_dependency "babel-transpiler"
   s.add_dependency "tilt"
   s.add_dependency "execjs"
   s.add_dependency "sprockets"
