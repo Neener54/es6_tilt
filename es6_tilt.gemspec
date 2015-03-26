@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = Es6Tilt::VERSION
   s.authors     = ["Michael Archibald"]
   s.email       = ["micharch54@gmail.com"]
-  s.homepage    = "github.com/neener54/es6_tilt"
+  s.homepage    = "http://github.com/neener54/es6_tilt"
   s.summary     = "Transpiles es6 to js"
   s.description = "Transforms .js files into js files so you can write es6 code and use it in your views."
   s.license     = "MIT"
