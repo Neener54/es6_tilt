@@ -1,7 +1,7 @@
 require 'tilt'
 require 'execjs'
 require 'babel/source'
-module Sprockets
+module Es6Tilt
   class ES6TiltTransformer < Tilt::Template
     include Babel::Source
     self.default_mime_type = 'application/javascript'
@@ -26,8 +26,15 @@ module Sprockets
       return result['code']
     end
 
+    def self.call(template)
+
+    end
+
     def evaluate(scope, locals, &block)
       @output ||= transform(data)
     end
   end
+end
+ActiveSupport.on_load(:action_view) do
+  ActionView::Template.register_template_handler :es6, Es6Tilt::ES6TiltTransformer
 end
