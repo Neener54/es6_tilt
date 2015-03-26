@@ -2,10 +2,10 @@ require 'test_helper'
 
 class Es6TiltTest < ActiveSupport::TestCase
   test "truth" do
-    assert_kind_of Module, Es6Tilt
+    assert_kind_of Module, Sprockets::ES6TiltTransformer
   end
   test "transpile" do
-    template = Es6Tilt::ES6TiltTransformer.new('./test/dummy/app/assets/javascripts/test.es6')
+    template = Sprockets::ES6TiltTransformer.new('./test/dummy/app/assets/javascripts/test.es6')
     output = template.render
     expectation = '"use strict";
 

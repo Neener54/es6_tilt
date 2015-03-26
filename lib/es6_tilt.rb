@@ -1,7 +1,7 @@
 require 'tilt'
 require 'execjs'
 require 'babel/source'
-module Es6Tilt
+module Sprockets
   class ES6TiltTransformer < Tilt::Template
     include Babel::Source
     self.default_mime_type = 'application/javascript'
