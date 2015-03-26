@@ -5,7 +5,7 @@ class Es6TiltTest < ActiveSupport::TestCase
     assert_kind_of Module, Es6Tilt
   end
   test "transpile" do
-    template = Es6Tilt::ES6TiltTransformer.new('./test/dummy/app/assets/javascripts/test.es6')
+    template = ES6Tilt.new('./test/dummy/app/assets/javascripts/test.es6')
     output = template.render
     expectation = '"use strict";
 
