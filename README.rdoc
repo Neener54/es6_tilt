@@ -1,3 +1,15 @@
 = Es6Tilt
 
+Allows you to use es6 in your ruby apps (with tilt or sprockets).
+
+== Rails Install
+Add this to your Gemfile:
+    gem 'es6_tilt'
+Now add an initializer for the filetype you'd like to have. So for example.
+   #config/initializers/sprockets.rb
+   Rails.application.assets.register_engine '.es6', ES6Tilt::ES6Transformer
+   
+That will make files ending with .es6 show up as js in your browser.
+Can work on .jsx files as well. It's just Babel in the background.
+
 This project rocks and uses MIT-LICENSE.
