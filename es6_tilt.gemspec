@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.email       = ["micharch54@gmail.com"]
   s.homepage    = "github.com/neener54/es6_tilt"
   s.summary     = "Transpiles es6 to js"
-  s.description = "TODO: Description of Es6Tilt."
+  s.description = "Transforms .js files into js files so you can write es6 code and use it in your views."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
