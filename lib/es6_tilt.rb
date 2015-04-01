@@ -10,7 +10,7 @@ module ES6Tilt
     end
 
     def evaluate(scope, locals, &block)
-      output = Babel::Transpiler.transform(data)
+      output = Babel::Transpiler.transform(data, {"modules" => "system"})
       output["code"]
     end
 
