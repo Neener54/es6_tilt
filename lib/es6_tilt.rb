@@ -16,3 +16,4 @@ module ES6Tilt
 
   end
 end
+Tilt.register(ES6Tilt::ES6Transformer, "es6")
