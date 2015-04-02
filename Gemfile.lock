@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    es6_tilt (0.0.4)
+    es6_tilt (0.0.7)
       babel-transpiler (~> 0.6.0)
       execjs (~> 2.0)
       rails (~> 4.0)
