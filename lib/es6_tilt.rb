@@ -2,7 +2,7 @@ require 'tilt'
 require 'babel/transpiler'
 require 'sprockets'
 
-module ES6Tilt 
+module ES6Tilt
   class ES6Transformer< Tilt::Template
     self.default_mime_type = 'application/javascript'
 
@@ -16,4 +16,5 @@ module ES6Tilt
 
   end
 end
-Tilt.register(ES6Tilt::ES6Transformer, "es6")
+Sprockets.register_engine('.es6', ES6Tilt::ES6Transformer)
+Sprockets.register_engine('.jsx', ES6Tilt::ES6Transformer)
