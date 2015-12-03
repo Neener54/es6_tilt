@@ -11,6 +11,7 @@ module ES6Tilt
 
     def evaluate(scope, locals, &block)
       output = Babel::Transpiler.transform(data)
+      puts output.inspect
       output["code"]
     end
 
