@@ -1,6 +1,6 @@
 require 'tilt'
-require 'babel/transpiler'
 require 'sprockets'
+require 'tempfile'
 
 module ES6Tilt
   class ES6Transformer< Tilt::Template
@@ -10,9 +10,17 @@ module ES6Tilt
     end
 
     def evaluate(scope, locals, &block)
-      output = Babel::Transpiler.transform(data)
-      puts output.inspect
-      output["code"]
+
+      location = File.dirname(file)
+      compacted = Tempfile.new('compacted', location)
+
+      `#{Rails.root.join('node_modules','.bin')}/rollup -f iife --no-indent -c #{Rails.root}/rollup.config.js -n #{File.basename(file).camelize} -- #{file} > #{compacted.path}`
+
+      output = compacted.read
+
+      compacted.close
+      compacted.unlink
+      output
     end
 
   end

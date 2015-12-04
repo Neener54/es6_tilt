@@ -1,8 +1,5 @@
-import React from 'react'
-/**
- * Created by michaelarchibald on 3/25/15.
- */
-class Person {
+import foo from './include.es6'
+export default class Person {
     constructor(args="default"){
         this.eat = "happy Meal";
     }

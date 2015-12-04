@@ -8,21 +8,21 @@ class Es6TiltTest < ActiveSupport::TestCase
   test "transpile" do
     template = ES6Tilt::ES6Transformer.new('./test/dummy/app/assets/javascripts/test.es6')
     output = template.render
-    expectation = '"use strict";
+    expectation = "var Test.es6 = (function () { 'use strict';
 
-var _classCallCheck = function (instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } };
+foo = {
+	bar: \"Bar\"
+};
 
-/**
- * Created by michaelarchibald on 3/25/15.
- */
+class Person {
+    constructor(args = \"default\") {
+        this.eat = \"happy Meal\";
+    }
+}
 
-var Person = function Person() {
-    var args = arguments[0] === undefined ? "default" : arguments[0];
+return Person;
 
-    _classCallCheck(this, Person);
-
-    this.eat = "happy Meal";
-};'
-    assert_equal expectation, output
+})();"
+    assert_equal output, expectation
   end
 end
