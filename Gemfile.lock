@@ -1,11 +1,12 @@
 PATH
   remote: .
   specs:
-    es6_tilt (0.0.7)
-      execjs (~> 2.0)
+    es6_tilt (0.1.2)
+      babel-transpiler
+      execjs (>= 2.0)
       rails (~> 4.0)
-      sprockets (~> 2.0)
-      tilt (~> 1.0)
+      sprockets (>= 2.0)
+      tilt (>= 1.0)
 
 GEM
   remote: https://rubygems.org/
@@ -46,6 +47,10 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.0)
+    babel-source (4.7.16)
+    babel-transpiler (0.6.0)
+      babel-source (>= 4.0, < 5)
+      execjs (~> 2.0)
     builder (3.2.2)
     coderay (1.1.0)
     erubis (2.7.0)
@@ -120,7 +125,7 @@ PLATFORMS
 
 DEPENDENCIES
   es6_tilt!
-  pry (~> 0.10.3)
+  pry (>= 0.10.3)
   sqlite3
 
 BUNDLED WITH

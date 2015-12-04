@@ -13,13 +13,14 @@ Gem::Specification.new do |s|
   s.summary     = "Transpiles es6 to js"
   s.description = "Transforms .js files into js files so you can write es6 code and use it in your views."
   s.license     = "MIT"
-
-  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
+  #s.files = Dir["{lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", '~> 4.0'
-  s.add_runtime_dependency "tilt", '~> 1.0'
-  s.add_runtime_dependency "execjs",  '~> 2.0'
-  s.add_runtime_dependency "sprockets", '~> 2.0'
-	s.add_development_dependency "pry", '~> 0.10.3'
+  s.add_runtime_dependency "tilt", '>= 1.0'
+  s.add_runtime_dependency "babel-transpiler"
+  s.add_runtime_dependency "execjs",  '>= 2.0'
+  s.add_runtime_dependency "sprockets", '>= 2.0'
+	s.add_development_dependency "pry", '>= 0.10.3'
 end
